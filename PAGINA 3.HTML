@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminis Escuela Taller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            background-color: #007bff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #007bff;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Luminis Escuela Taller</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a href="#" onclick="mostrarSeccion('portafolio')">Portafolio</a>
+        <a href="#" onclick="mostrarSeccion('servicios')">Servicios</a>
+        <a href="#" onclick="mostrarSeccion('talleres')">Talleres</a>
+        <a href="#" onclick="mostrarSeccion('cotizaciones')">Cotizaciones</a>
+        <a href="#" onclick="mostrarSeccion('fotografias')">Fotografías</a>
+        <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+    </nav> <div class="container" id="inicio">
+        <h2>¡Quiénes Somos!</h2>
+        <p>Luminis Escuela Taller es una institución de formación complementaria y para el entretenimiento, que busca proporcionar sesiones educativas, lúdicas y de entretenimiento para todo tipo de edades y entidades, con la misión de servir y promover actividades ganadoras para la transformación social.</p>
+    </div>
+    <div class="container" id="portafolio" style="display: none;">
+        <h2>Portafolio</h2>
+        <p>En nuestro portafolio encontrarás una selección de nuestros proyectos y trabajos destacados. Descubre nuestras áreas de expertise y cómo podemos contribuir a tu proyecto.</p>
+    </div>
+    <div class="container" id="servicios" style="display: none;">
+        <h2>Servicios</h2>
+        <p>Ofrecemos una amplia gama de servicios que van desde consultoría cultural hasta gestión de proyectos. Conoce más sobre lo que podemos hacer por ti.</p>
+    </div> <div class="container" id="talleres" style="display: none;">
+        <h2>Talleres</h2>
+        <ul>
+            <li>Letras y Café</li>
+            <li>Lectura viva</li>
+            <li>Creación libre</li>
+            <li>Historia de hoy y ayer</li>
+            <li>Memorias viva</li>
+            <li>Explorando el mundo</li>
+            <li>Cuerpo, mente y naturaleza</li>
+            <li>Ciencia y tecnologías</li>
+            <li>Filosofía y fe</li>
+        </ul>
+    </div>
+    <div class="container" id="cotizaciones" style="display: none;">
+        <h2>Cotizaciones</h2>
+        <p>En esta sección puedes solicitar una cotización para nuestros servicios. Por favor, completa el siguiente formulario y nos pondremos en contacto contigo:</p>
+        <form method="post" action="enviar.php">
+            <label for="tipo">Tipo de cotización:</label><br>
+            <select id="tipo" name="tipo">
+                <option value="fluido">Cotización por trabajo fluido</option>
+                <option value="paquete">Cotización por paquete de talleres</option>
+                <option value="empresarial">Cotización para empresas</option>
+            </select><br>
+            <label for="detalles">Detalles adicionales:</label><br>
+            <textarea id="detalles" name="detalles" rows="4"></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div> <div class="container" id="fotografias" style="display: none;">
+        <h2>Fotografías</h2>
+        <p>Explora nuestra galería de fotografías que muestran nuestros proyectos y eventos especiales. Sumérgete en nuestra historia visual y descubre más sobre nuestra escuela taller.</p>
+        <!-- Aquí puedes agregar la galería de fotografías -->
+    </div>
+    <div class="container" id="contacto" style="display: none;">
+        <h2>Contacto</h2>
+        <p>Escríbenos al:</p>
+        <ul>
+            <li>holaagenios@gmail.com</li>
+            <li>3012617503</li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2024 Luminis Escuela Taller - Todos los derechos reservados</p>
+    </footer>
+    <script>
+        function mostrarSeccion(seccion) {
+            var secciones = ['inicio', 'portafolio', 'servicios', 'talleres', 'cotizaciones', 'fotografias', 'contacto'];
+            for (var i = 0; i < secciones.length; i++) {
+                document.getElementById(secciones[i]).style.display = 'none';
+            }
+            document.getElementById(seccion).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
